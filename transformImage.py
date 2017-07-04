@@ -32,7 +32,7 @@ def get_pixel(image, i, j):
   return pixel
 
 # Create a Grayscale version of the image
-def convert_grayscale(image):
+def transform_image(image):
   # Get size
   width, height = image.size
 
@@ -52,9 +52,9 @@ def convert_grayscale(image):
       blue =  pixel[2]
 
       # Transform to grayscale
-      gray = int(gray)
+      gray = ???
       # Set Pixel in new image
-      pixels[i, j] = (gray, gray, gray)
+      pixels[i, j] = (???, ????, ????)
 
   # Return new image
   return new
@@ -65,8 +65,8 @@ if __name__ == "__main__":
   input_path = raw_input("Please type the path of your image: ")
   original = open_image(input_path)
 
-  # Convert to Grayscale and save
-  new = convert_grayscale(original)
+  # Convert and save
+  new = transform_image(original)
 
   output_path = raw_input("Please type the output path of the grayscale image: ")
   save_image(new, output_path)
